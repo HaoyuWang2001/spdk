@@ -43,7 +43,9 @@ ifneq ($(strip $(CONFIG_URMA_DIR)),)
 CFLAGS += -I$(CONFIG_URMA_DIR)/include/ub/umdk/urma -I$(CONFIG_URMA_DIR)/include \
 	-I$(CONFIG_URMA_DIR)/src/urma/lib/urma/core/include \
 	-I$(CONFIG_URMA_DIR)/src/urma/lib/urma/bond/include
-LDFLAGS += -L$(CONFIG_URMA_DIR)/lib64 -L$(CONFIG_URMA_DIR)/lib -L$(CONFIG_URMA_DIR)/build/lib
+LDFLAGS += -L$(CONFIG_URMA_DIR)/lib64 -L$(CONFIG_URMA_DIR)/lib -L$(CONFIG_URMA_DIR)/build/lib \
+	-L$(CONFIG_URMA_DIR)/build/urma/lib/urma/core \
+	-L$(CONFIG_URMA_DIR)/build/urma/common
 else
 CFLAGS += -I/usr/include/ub/umdk/urma
 endif

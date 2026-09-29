@@ -276,7 +276,9 @@ endif
 ifeq ($(CONFIG_URMA),y)
 ifneq ($(strip $(CONFIG_URMA_DIR)),)
 SYS_LIBS += -L$(CONFIG_URMA_DIR)/lib64 -L$(CONFIG_URMA_DIR)/lib \
-	-L$(CONFIG_URMA_DIR)/build/lib
+	-L$(CONFIG_URMA_DIR)/build/lib \
+	-L$(CONFIG_URMA_DIR)/build/urma/lib/urma/core \
+	-L$(CONFIG_URMA_DIR)/build/urma/common
 endif
 SYS_LIBS += -lurma
 endif

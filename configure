@@ -1017,7 +1017,9 @@ if [ "${CONFIG[URMA]}" = "y" ]; then
 			"-I${CONFIG[URMA_DIR]}/src/urma/lib/urma/core/include"
 			"-I${CONFIG[URMA_DIR]}/src/urma/lib/urma/bond/include")
 		urma_ldflags+=("-L${CONFIG[URMA_DIR]}/lib64" "-L${CONFIG[URMA_DIR]}/lib"
-			"-L${CONFIG[URMA_DIR]}/build/lib")
+			"-L${CONFIG[URMA_DIR]}/build/lib"
+			"-L${CONFIG[URMA_DIR]}/build/urma/lib/urma/core"
+			"-L${CONFIG[URMA_DIR]}/build/urma/common")
 	else
 		urma_cflags+=("-I/usr/include/ub/umdk/urma")
 	fi
